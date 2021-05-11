@@ -9,9 +9,33 @@
 <style>
 body { margin: 0; padding: 0; }
 #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+	#map-overlay {
+    
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 20vh;
+    z-index: 1;
+    padding: 10px 30px;
+    overflow: hidden overlay;
+    background-color: #fff; 
+    margin: 24px;
+ }
+	.heading {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    font: bold 16px / 24px UberMove, Helvetica, Arial, sans-serif;
+    margin: 24px;
+ }
 </style>
 </head>
 <body>
+ <div id="map-overlay">
+        <div class="heading">Heat map out of Public flight Data available at PX4 Flight Review. </div>
+    </div>
 <div id="map"></div>
 
 <script>
@@ -140,7 +164,7 @@ body { margin: 0; padding: 0; }
                         6,
                         'rgb(178,24,43)'
                     ],
-                    'circle-stroke-color': 'white',
+                    'circle-stroke-color': 'blue',
                     'circle-stroke-width': 1,
                     // Transition from heatmap to circle layer by zoom level
                     'circle-opacity': [
